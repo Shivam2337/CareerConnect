@@ -1,5 +1,5 @@
 import React from "react";
-import "./style.css";
+import "./HomePagestyle.css";
 import facebook from "../Images/facebook.svg";
 import instagram from "../Images/instagram.svg";
 import linkedin from "../Images/linkedin.svg";
@@ -45,15 +45,21 @@ const HomePage = () => {
               <span className="span-logo">all in one place</span>
             </p>
           </div>
-           <Card className="search-bar"><div >
-          <input type="text" placeholder="Job title, keywords or company"/>
-          <input type="text" placeholder="Location" style={{maxWidth:'200px'}}/>
-          <button className="btn-primary" style={{ padding: "1rem 1rem" }}>
-            Explore Jobs
-          </button>
-        </div></Card>
+          <Card className="search-bar">
+            <div>
+              <input type="text" placeholder="Job title, keywords or company" />
+              <input
+                type="text"
+                placeholder="Location"
+                style={{ maxWidth: "200px" }}
+              />
+              <button className="btn-primary" style={{ padding: "1rem 1rem" }}>
+                Explore Jobs
+              </button>
+            </div>
+          </Card>
           <div className="main-image">
-            <img src={JobPortalHome} alt="HandShake"/>
+            <img src={JobPortalHome} alt="HandShake" />
           </div>
         </div>
       </main>

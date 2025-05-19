@@ -46,11 +46,11 @@
   cursor: pointer;
 }
 .main-section {
- background-color: white;
- padding: 1rem;
- border-radius: 1rem;
- box-shadow: 0 10px 25px rgba(0,0,0,0,1);
- margin: 1rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0, 1);
+  margin: 1rem;
 }
 .main-content {
   display: flex;
@@ -94,7 +94,7 @@
   padding: 1rem;
   position: absolute;
   margin-top: 27rem;
- border: 1px solid goldenrod;
+  border: 1px solid goldenrod;
 }
 .search-bar input {
   flex: 1;
