@@ -1,5 +1,5 @@
 import React from "react";
-import "./HomePagestyle.css";
+import "../Styles/HomePagestyle.css";
 import facebook from "../Images/facebook.svg";
 import instagram from "../Images/instagram.svg";
 import linkedin from "../Images/linkedin.svg";
@@ -16,8 +16,17 @@ import MonitorIcon from "@mui/icons-material/Monitor";
 import CampaignRoundedIcon from "@mui/icons-material/CampaignRounded";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import { Card } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+// import { Search } from 'lucide-react';
 
 const HomePage = () => {
+  const navigate = useNavigate();
+  const UserRegistration = (e) => {
+    navigate("/Registration");
+  };
+  const UserLogin = (e) => {
+    navigate("/Login");
+  };
   return (
     <div className="page-container">
       {/* Header */}
@@ -26,10 +35,15 @@ const HomePage = () => {
           <span>Career</span> Connect
         </div>
         <nav className="nav-links">
+          <a href="home">Home</a>
           <a href="jobs">Jobs</a>
           <a href="companies">Companies</a>
-          <button className="btn-outline">Log In</button>
-          <button className="btn-primary">Register</button>
+          <button className="btn-outline" onClick={UserLogin}>
+            Log In
+          </button>
+          <button className="btn-primary" onClick={UserRegistration}>
+            Register
+          </button>
         </nav>
       </header>
       {/*Middle section  */}
@@ -47,13 +61,19 @@ const HomePage = () => {
           </div>
           <Card className="search-bar">
             <div>
-              <input type="text" placeholder="Job title, keywords or company" />
+              {/* <Search style={{
+        position: 'absolute',
+        left: 12,
+        top: '50%',
+        transform: 'translateY(-50%)'
+      }} /> */}
+              <input type="text" placeholder="      Job title, keywords or company" />
               <input
                 type="text"
                 placeholder="Location"
                 style={{ maxWidth: "200px" }}
               />
-              <button className="btn-primary" style={{ padding: "1rem 1rem" }}>
+              <button className="btn-primary">
                 Explore Jobs
               </button>
             </div>
